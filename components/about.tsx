@@ -60,9 +60,11 @@ export function About() {
               variant="outline"
               className="flex items-center gap-2"
             >
-              <Link href="/Tiens Resume.pdf" download>
-                <Download className="h-4 w-4" />
-                Download Resume
+              <Link
+                href="https://drive.google.com/file/d/1DVJpquNmeVi6I1WjEQi7YjK2HNDFgEBA/view?usp=sharing"
+                target="_blank"
+              >
+                View Resume
               </Link>
             </Button>
           </div>
