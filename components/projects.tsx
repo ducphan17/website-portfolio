@@ -128,7 +128,7 @@ export function Projects() {
         "A personal portfolio website showcasing projects and skills with a modern, responsive design.",
       image: "/portfolioPic.png",
       tags: ["TypeScript", "Next.js", "HTML", "CSS"],
-      liveUrl: "https://myportfolio.com", // Make sure it's always a string
+      liveUrl: "https://website-portfolio-tau-three.vercel.app/", // Make sure it's always a string
       githubUrl: "https://github.com/ducphan17/portfolio-website",
     },
   ];
