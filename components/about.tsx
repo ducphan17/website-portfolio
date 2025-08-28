@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 
 export function About() {
@@ -30,14 +29,6 @@ export function About() {
               development.
             </p>
             <p className="text-muted-foreground mb-6"></p>
-
-            {/* <div className="grid grid-cols-2 gap-4 mb-8">
-              
-              <h3>Education</h3>
-              <p>University of Texas at Dallas</p>
-              <p>Bachelor's Degree of Computer Science</p>
-            </div> */}
-
             <Button
               asChild
               variant="outline"
