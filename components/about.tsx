@@ -23,36 +23,20 @@ export function About() {
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
             <p className="text-muted-foreground mb-4">
-              Im a passionate frontend developer with a strong foundation in
-              building modern web applications. With experience in full-stack
-              development, specialize in creating responsive, accessible, and
-              performant user interfaces.
+              I began my journey as a designer and gradually transitioned into
+              front-end development. Through working on various school projects
+              and organizational initiatives, I discovered my interest in other
+              areas of programming, which ultimately led me to pursue full-stack
+              development.
             </p>
-            <p className="text-muted-foreground mb-6">
-              My journey in web development started when I built my first
-              website in college. Since then, I have worked with various
-              technologies and frameworks, always striving to stay updated with
-              the latest industry trends and best practices.
-            </p>
+            <p className="text-muted-foreground mb-6"></p>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {/* <Card>
-                <CardContent className="p-4">
-                  <h3 className="font-bold text-lg mb-1"></h3>
-                  <p className="text-sm text-muted-foreground">
-                    Years Experience
-                  </p>
-                </CardContent>
-              </Card> */}
-              <Card>
-                <CardContent className="p-4">
-                  <h3 className="font-bold text-lg mb-1">5+</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Projects Completed
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            {/* <div className="grid grid-cols-2 gap-4 mb-8">
+              
+              <h3>Education</h3>
+              <p>University of Texas at Dallas</p>
+              <p>Bachelor's Degree of Computer Science</p>
+            </div> */}
 
             <Button
               asChild
@@ -60,7 +44,7 @@ export function About() {
               className="flex items-center gap-2"
             >
               <Link
-                href="https://drive.google.com/file/d/1DVJpquNmeVi6I1WjEQi7YjK2HNDFgEBA/view?usp=sharing"
+                href="https://drive.google.com/file/d/1RTO-OS792nyrFfFDaTL6GTrtgdOEhcrL/view?usp=sharing"
                 target="_blank"
               >
                 View Resume

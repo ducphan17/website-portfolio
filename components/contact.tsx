@@ -36,8 +36,8 @@ export function Contact() {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      value: "phantienduc17072005@gmail.com",
-      link: "mailto:phantienduc17072005@gmail.com",
+      value: "tiendphan07@gmail.com",
+      link: "mailto:tiendphan07@gmail.com",
     },
     {
       icon: <Phone className="h-5 w-5" />,
@@ -48,7 +48,7 @@ export function Contact() {
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Location",
-      value: "Brownsville, TX",
+      value: "Richardson, TX",
       link: null,
     },
   ];
@@ -57,11 +57,7 @@ export function Contact() {
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to discuss potential opportunities?
-            Feel free to reach out to me using the form below.
-          </p>
+          <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -94,7 +90,7 @@ export function Contact() {
             <Card>
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium">
                         Your Name
@@ -108,32 +104,19 @@ export function Contact() {
                         required
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Your Email
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="john@example.com"
-                        required
-                      />
-                    </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">
-                      Subject
+                    <label htmlFor="email" className="text-sm font-medium">
+                      Your Email
                     </label>
                     <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
                       onChange={handleChange}
-                      placeholder="Project Inquiry"
+                      placeholder="john@example.com"
                       required
                     />
                   </div>
@@ -147,7 +130,7 @@ export function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell me about your project..."
+                      placeholder="Type your message here..."
                       rows={5}
                       required
                     />

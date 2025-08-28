@@ -26,7 +26,7 @@ export function Footer() {
               Portfolio
             </Link>
             <p className="text-sm text-muted-foreground mt-1">
-              &copy; {currentYear} Your Name. All rights reserved.
+              &copy; {currentYear} Tien Phan. All rights reserved.
             </p>
           </div>
 

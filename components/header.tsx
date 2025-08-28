@@ -31,17 +31,14 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-200 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
-      }`}
+      className={`sticky top-4 z-50 transition-all duration-200 flex justify-center`}
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="#home" className="text-xl font-bold">
-          Portfolio
-        </Link>
-
+      <div
+        className={`px-6 py-3 flex items-center justify-center rounded-full shadow-md border 
+      transition-all duration-200
+      ${isScrolled ? "bg-background/80 backdrop-blur-md" : "bg-background/50"}
+    `}
+      >
         {isMobile ? (
           <>
             <Button
@@ -66,9 +63,6 @@ export function Header() {
                       {item.name}
                     </Link>
                   ))}
-                  <Button asChild className="mt-4">
-                    <Link href="#contact">Hire Me</Link>
-                  </Button>
                 </nav>
               </div>
             )}
@@ -84,9 +78,6 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button asChild>
-              <Link href="#contact">Hire Me</Link>
-            </Button>
           </nav>
         )}
       </div>
