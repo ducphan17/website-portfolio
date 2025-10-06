@@ -124,3 +124,60 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+
+@keyframes border-run {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0; 
+  }
+}
+
+@keyframes bg-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.my-special-btn::before {
+  content: "";
+  position: absolute;
+  inset:0;
+  border-radius:0.5rem;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #feca57,
+    #48dbfb,
+    #ff6b6b,
+  );
+  background-size: 400% 400%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  animation: border-run 3s linear infinite;
+} 
+
+
+.my-special-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-raidus: 0.5rem;
+  background: linear-gradient(90deg, #3b82f6 0%, #9333ea 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.my-special-btn:hover::after {
+  animation: bg-sweep 0.6s forwards;
+}

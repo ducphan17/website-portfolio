@@ -22,11 +22,11 @@ export function About() {
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
             <p className="text-muted-foreground mb-4">
-              I began my journey as a designer and gradually transitioned into
-              front-end development. Through working on various school projects
-              and organizational initiatives, I discovered my interest in other
-              areas of programming, which ultimately led me to pursue full-stack
-              development.
+              I am a Computer Science student that enjoy learning about coding.
+              I am currently shifting myself towards database management. I
+              found this interest through creating a small database using MySQL
+              and React for a small business. I also likes to draw and create
+              digital art in my free time.
             </p>
             <p className="text-muted-foreground mb-6"></p>
             <Button
@@ -35,7 +35,7 @@ export function About() {
               className="flex items-center gap-2"
             >
               <Link
-                href="https://drive.google.com/file/d/1RTO-OS792nyrFfFDaTL6GTrtgdOEhcrL/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Tkd9ZPMVAAaxsGnd-gQ_7KkSn0jcKq6w/view?usp=sharing"
                 target="_blank"
               >
                 View Resume

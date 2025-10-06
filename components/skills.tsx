@@ -14,11 +14,10 @@ export function Skills() {
       title: "Frontend Development",
       icon: <Layout className="h-6 w-6" />,
       skills: [
-        "HTML5",
-        "CSS3",
+        "HTML",
+        "CSS",
         "JavaScript",
         "TypeScript",
-        "React",
         "Next.js",
         "Tailwind CSS",
       ],
@@ -26,12 +25,12 @@ export function Skills() {
     {
       title: "Backend Knowledge",
       icon: <Database className="h-6 w-6" />,
-      skills: ["Node.js", "Express", "RESTful APIs", "GraphQL", "Firebase"],
+      skills: ["MySQL","Node.js", "Express", "RESTful APIs"],
     },
     {
       title: "Tools & Platforms",
       icon: <Terminal className="h-6 w-6" />,
-      skills: ["Git", "GitHub", "VS Code", "Figma", "Jira"],
+      skills: ["Git", "GitHub", "VS Code", "Figma"],
     },
     {
       title: "UI/UX Design",
@@ -47,7 +46,7 @@ export function Skills() {
       title: "Other Skills",
       icon: <Layers className="h-6 w-6" />,
       skills: [
-        "SEO",
+        "C++",
         "Performance Optimization",
         "Accessibility",
         "Cross-browser Compatibility",
@@ -56,7 +55,7 @@ export function Skills() {
     {
       title: "Currently Learning",
       icon: <Code className="h-6 w-6" />,
-      skills: ["React Native", "Three.js", "WebGL", "AWS"],
+      skills: ["AWS", "Docker"],
     },
   ];
 

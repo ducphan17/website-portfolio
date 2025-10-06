@@ -12,7 +12,7 @@ export function Projects() {
         "A social-media inspired lost and found app where users can post, search, and communicate about lost and found items.",
       image: "/CometClaimPic.png",
       tags: ["TypeScript", "React Native", "AWS Lambda", "DynamoDB"],
-      status: "in-progress",
+      githubUrl: "https://github.com/acm-projects/CometClaim",
     },
     {
       title: "Portfolio Website",
@@ -21,7 +21,7 @@ export function Projects() {
       image: "/portfolioPic.png",
       tags: ["TypeScript", "Next.js", "HTML", "CSS"],
       liveUrl: "https://website-portfolio-tau-three.vercel.app/", // Make sure it's always a string
-      githubUrl: "https://github.com/ducphan17/portfolio-website",
+      githubUrl: "https://github.com/ducphan17/website-portfolio#",
     },
   ];
 
@@ -31,8 +31,7 @@ export function Projects() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">My Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Here are some of my recent projects. Each one was built to solve a
-            specific problem or explore new technologies.
+            Here are some of my projects
           </p>
         </div>
 
@@ -62,12 +61,10 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-                {project.status === "in-progress" ? (
-                  <div className="px-4 py-2 bg-gray-200 text-gray-600 text-sm rounded-md text-center">
-                    In Progress
-                  </div>
-                ) : (
-                  <div className="flex gap-3">
+
+                <div className="flex gap-3">
+                  {/* Conditionally render Live Demo button only if liveUrl exists */}
+                  {project.liveUrl && (
                     <Button
                       asChild
                       variant="outline"
@@ -75,7 +72,7 @@ export function Projects() {
                       className="gap-2"
                     >
                       <Link
-                        href={project.liveUrl ?? "#"}
+                        href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -83,23 +80,18 @@ export function Projects() {
                         Live Demo
                       </Link>
                     </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="gap-2"
+                  )}
+                  <Button asChild variant="outline" size="sm" className="gap-2">
+                    <Link
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Link
-                        href={project.githubUrl ?? "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="h-4 w-4" />
-                        Code
-                      </Link>
-                    </Button>
-                  </div>
-                )}
+                      <Github className="h-4 w-4" />
+                      Code
+                    </Link>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
