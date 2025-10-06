@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import {
   Menu,
@@ -16,18 +16,20 @@ import { Button } from "@/components/ui/button";
 import { useMobile } from "@/hooks/use-mobile";
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMobile();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+  // Remove unused isScrolled state and useEffect
+  // const [isScrolled, setIsScrolled] = useState(false);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 10);
+  //   };
+  //
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   const navItems = [
     {
@@ -69,13 +71,7 @@ export function Header() {
   ];
 
   return (
-    <header
-      className={`sticky top-4 z-50 transition-all duration-200 flex justify-center`}
-    >
-      {/* <div
-        className={`px-6 py-3 flex items-center justify-center rounded-full shadow-md border 
-      transition-all duration-200
-      ${isScrolled ? "bg-background/80 backdrop-blur-md" : "bg-background/50"} `}*/}
+    <header className="sticky top-4 z-50 transition-all duration-200 flex justify-center">
       <div>
         {isMobile ? (
           <>
@@ -93,7 +89,7 @@ export function Header() {
                 {navItems.map((item) => (
                   <li
                     key={item.name}
-                    className={`relative list-none w-13 h-13 bg-white shadow-lg rounded-full cursor-pointer flex justify-center items-center transition-all duration-500 group hover:w-32`}
+                    className="relative list-none w-13 h-13 bg-white shadow-lg rounded-full cursor-pointer flex justify-center items-center transition-all duration-500 group hover:w-32"
                     style={{ boxShadow: "0 10px 25px rgba(0,0,0,0.1)" }}
                   >
                     <Link
@@ -124,7 +120,7 @@ export function Header() {
             {navItems.map((item) => (
               <li
                 key={item.name}
-                className={`relative list-none w-13 h-13 bg-white shadow-lg rounded-full cursor-pointer flex justify-center items-center transition-all duration-500 group hover:w-32`}
+                className="relative list-none w-13 h-13 bg-white shadow-lg rounded-full cursor-pointer flex justify-center items-center transition-all duration-500 group hover:w-32"
                 style={{ boxShadow: "0 10px 25px rgba(0,0,0,0.1)" }}
               >
                 <Link
